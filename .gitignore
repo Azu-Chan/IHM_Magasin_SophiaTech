@@ -1,0 +1,12 @@
+# IDE
+/target/
+.idea
+.classpath
+.project
+.settings/
+.iml
+bin/
+
+# CUSTO
+
+
