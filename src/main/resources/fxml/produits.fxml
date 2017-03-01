@@ -63,7 +63,7 @@
          <bottom>
             <Pane prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" onMouseClicked="#toBeOrToHave" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
                      </image>

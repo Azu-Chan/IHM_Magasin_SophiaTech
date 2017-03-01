@@ -25,7 +25,7 @@ public class Controller {
     @FXML
     public void initialize(){
         listeOfImage = new ArrayList<>();
-        listeOfImage.add("/images/promotion.jpg");
+        listeOfImage.add("/images/promotion.png");
         listeOfImage.add("/images/bienvenue.jpg");
     }
     public void remplaceImage(){
@@ -47,5 +47,8 @@ public class Controller {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void toBeOrToHave(){
+        System.out.println("");
     }
 }
