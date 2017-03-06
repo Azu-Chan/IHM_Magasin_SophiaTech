@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.MenuController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -97,7 +97,7 @@
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button fx:id="button2" blendMode="DARKEN" mnemonicParsing="false" onAction="#quiSommesNous" text="Qui Somme Nous" />
+                              <Button fx:id="button2" blendMode="DARKEN" mnemonicParsing="false" onAction="#quiSommesNous" text="Qui sommes nous ?" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
