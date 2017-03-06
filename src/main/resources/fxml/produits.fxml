@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.ProduitController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -68,32 +68,32 @@
                         <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
                      </image>
                   </ImageView>
-                  <MenuBar accessibleRole="BUTTON" layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" stylesheets="@ihmEnseigne.css">
+                  <MenuBar accessibleRole="BUTTON" layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" stylesheets="@styles.css">
                      <menus>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
+                              <Button fx:id="button1" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" mnemonicParsing="false" text="Qui sommes nous?" />
+                              <Button fx:id="button2" blendMode="DARKEN" mnemonicParsing="false" onAction="#quiSommesNous" text="Qui sommes nous?" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#produit" text="Produits" />
+                              <Button fx:id="button3" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#produit" text="Produits" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
+                              <Button fx:id="button4" blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
                            </graphic></Menu>
                      </menus>
                   </MenuBar>
-                  <Label layoutX="880.0" layoutY="21.0" text="roduits" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="suite" layoutX="880.0" layoutY="21.0" text="roduits" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label layoutX="844.0" layoutY="21.0" text="P" textFill="#00ccff">
+                  <Label fx:id="lettre" layoutX="844.0" layoutY="21.0" text="P" textFill="#00ccff">
                      <font>
                         <Font size="60.0" />
                      </font>
@@ -110,8 +110,8 @@
                <items>
                   <TextField prefHeight="26.0" prefWidth="210.0" promptText="Rechercher..." />
                   <Separator prefHeight="28.0" prefWidth="24.0" />
-                  <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="179.0" text="En stock uniquement" />
-                  <CheckBox mnemonicParsing="false" text="Promotion uniquement" />
+                  <CheckBox fx:id="enStock" mnemonicParsing="false" prefHeight="18.0" prefWidth="179.0" text="En stock uniquement" />
+                  <CheckBox fx:id="promotion" mnemonicParsing="false" text="Promotion uniquement" />
                   <Separator orientation="VERTICAL" prefHeight="28.0" prefWidth="15.0" />
                   <ChoiceBox prefWidth="150.0" />
                   <Separator prefHeight="28.0" prefWidth="20.0" />
@@ -120,7 +120,7 @@
             </ToolBar>
          </top>
          <center>
-            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tableView" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn prefWidth="422.9999694824219" text="Désignation" />
                   <TableColumn minWidth="0.0" prefWidth="149.0" text="Catégorie" />

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.AccueilController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -58,7 +58,7 @@
                <children>
                   <HBox alignment="TOP_RIGHT" layoutX="1720.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="167.0" prefWidth="115.0">
                      <children>
-                        <ImageView accessibleRole="BUTTON" fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="anglais" accessibleRole="BUTTON" fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#anglais" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/grande_bretagne_1606.gif" />
                            </image>
@@ -66,7 +66,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="francais" fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#francais" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/Flag_of_France.svg.png" />
                            </image>
@@ -81,7 +81,7 @@
          <center>
             <Pane prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" onMouseClicked="#toBeOrToHave" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
                      </image>
@@ -93,28 +93,28 @@
                      <menus>
                         <Menu fx:id="id1">
                            <graphic>
-                              <Button blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
+                              <Button fx:id="button1" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" mnemonicParsing="false" text="Qui sommes nous ?" />
+                              <Button fx:id="button2" blendMode="DARKEN" mnemonicParsing="false" onAction="#quiSommesNous" text="Qui sommes nous ?" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#produit" text="Produit" />
+                              <Button fx:id="button3" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#produit" text="Produit" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
+                              <Button fx:id="button4" blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
                            </graphic></Menu>
                      </menus>
                   </MenuBar>
-                  <Label layoutX="905.0" layoutY="19.0" text="ccueil" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="suite" layoutX="905.0" layoutY="19.0" text="ccueil" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label layoutX="863.0" layoutY="20.0" text="A" textFill="#00ccff">
+                  <Label fx:id="lettre" layoutX="863.0" layoutY="20.0" text="A" textFill="#00ccff">
                      <font>
                         <Font size="60.0" />
                      </font>
