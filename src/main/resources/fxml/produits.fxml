@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.ProduitController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -70,10 +70,22 @@
                   </ImageView>
                   <MenuBar layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" stylesheets="@ihmEnseigne.css">
                      <menus>
-                        <Menu mnemonicParsing="false" text="Accueil" />
-                        <Menu mnemonicParsing="false" text="Qui sommes nous ?" />
-                        <Menu mnemonicParsing="false" text="Produits" />
-                        <Menu mnemonicParsing="false" text="Contact" />
+                        <Menu mnemonicParsing="false">
+                           <graphic>
+                              <Button blendMode="DARKEN" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
+                           </graphic></Menu>
+                        <Menu mnemonicParsing="false">
+                           <graphic>
+                              <Button blendMode="DARKEN" mnemonicParsing="false" onAction="#quiSommesNous" text="Qui sommes nous ?" />
+                           </graphic></Menu>
+                        <Menu mnemonicParsing="false">
+                           <graphic>
+                              <Button blendMode="DARKEN" mnemonicParsing="false" onAction="#produit" text="Produits" />
+                           </graphic></Menu>
+                        <Menu mnemonicParsing="false">
+                           <graphic>
+                              <Button blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
+                           </graphic></Menu>
                      </menus>
                   </MenuBar>
                   <Label layoutX="880.0" layoutY="21.0" text="roduits" textAlignment="CENTER" textFill="WHITE">
