@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Modele {	
+public abstract class Modele {
 	private static List<Produit> produitList = new ArrayList<>();
 	private static List<String> categories = new ArrayList<>();
 	
@@ -22,4 +22,5 @@ public abstract class Modele {
 	public static List<Produit> getProducts(){
 		return produitList;
 	}
+
 }

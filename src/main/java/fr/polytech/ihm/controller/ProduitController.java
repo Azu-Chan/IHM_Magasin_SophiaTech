@@ -1,4 +1,4 @@
-package fr.polytech.ihm;
+package fr.polytech.ihm.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -12,7 +12,7 @@ import javafx.scene.control.TableView;
  */
 public class ProduitController extends MenuController {
     @FXML
-    private TableView<?> tableView;
+    private TableView tableView;
     @FXML
     public void initialize(){
         if (langue == true)
@@ -27,9 +27,9 @@ public class ProduitController extends MenuController {
         button2.setText("Who are we?");
         button3.setText("Product");
         
-        ((TableColumn<?, ?>) tableView.getColumns().get(0)).setText("Designation");
-        ((TableColumn<?, ?>) tableView.getColumns().get(1)).setText("Category");
-        ((TableColumn<?, ?>) tableView.getColumns().get(2)).setText("in stock?");
-        ((TableColumn<?, ?>) tableView.getColumns().get(4)).setText("price");
+        ((TableColumn) tableView.getColumns().get(0)).setText("Designation");
+        ((TableColumn) tableView.getColumns().get(1)).setText("Category");
+        ((TableColumn) tableView.getColumns().get(2)).setText("in stock?");
+        ((TableColumn) tableView.getColumns().get(4)).setText("price");
     }
 }
