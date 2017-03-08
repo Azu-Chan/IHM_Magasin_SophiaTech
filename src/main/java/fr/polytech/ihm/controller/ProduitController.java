@@ -12,7 +12,7 @@ import javafx.scene.control.TableView;
  */
 public class ProduitController extends MenuController {
     @FXML
-    private TableView tableView;
+    private TableView<?> tableView;
     @FXML
     public void initialize(){
         if (langue == true)
@@ -21,14 +21,15 @@ public class ProduitController extends MenuController {
 
     public void anglais() {
         langue=true;
-        lettre.setText("H");
-        suite.setText("ome");
+        lettre.setText("P");
+        suite.setText("roducts");
         button1.setText("Home");
         button2.setText("Who are we?");
         button3.setText("Product");
-        ((TableColumn) tableView.getColumns().get(0)).setText("Designation");
-        ((TableColumn) tableView.getColumns().get(1)).setText("Category");
-        ((TableColumn) tableView.getColumns().get(2)).setText("in stock?");
-        ((TableColumn) tableView.getColumns().get(4)).setText("price");
+        
+        ((TableColumn<?, ?>) tableView.getColumns().get(0)).setText("Designation");
+        ((TableColumn<?, ?>) tableView.getColumns().get(1)).setText("Category");
+        ((TableColumn<?, ?>) tableView.getColumns().get(2)).setText("in stock?");
+        ((TableColumn<?, ?>) tableView.getColumns().get(4)).setText("price");
     }
 }
