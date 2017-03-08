@@ -32,7 +32,7 @@
          <children>
             <VBox layoutX="1338.0" layoutY="-1.0" prefHeight="97.0" prefWidth="427.0">
                <children>
-                  <Label prefHeight="30.0" text="Nous contacter :" textFill="WHITE">
+                  <Label fx:id="contact" prefHeight="30.0" text="Nous contacter :" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -41,7 +41,7 @@
                   <TextField />
                   <Label prefHeight="30.0" text="Message :" textFill="WHITE" underline="true" />
                   <TextArea prefHeight="47.0" prefWidth="588.0" />
-                  <Button mnemonicParsing="false" text="Envoyer" />
+                  <Button fx:id="envoyer" mnemonicParsing="false" text="Envoyer" />
                </children>
             </VBox>
             <Label layoutX="849.0" layoutY="115.0" prefHeight="17.0" prefWidth="220.0" text="Copyright 2017 To Be or To Have" textFill="WHITE" />
@@ -50,8 +50,8 @@
                   <Image url="@../images/16790432_10209955312417271_467153859_n.png" />
                </image>
             </ImageView>
-            <Hyperlink layoutX="388.0" layoutY="25.0" text="Qui sommes nous ?" textFill="WHITE" />
-            <Hyperlink layoutX="404.0" layoutY="50.0" text="En savoir plus" textFill="WHITE" />
+            <Hyperlink fx:id="lient1" layoutX="388.0" layoutY="25.0" onAction="#quiSommesNous" text="Qui sommes nous ?" textFill="WHITE" />
+            <Hyperlink fx:id="lient2" layoutX="404.0" layoutY="50.0" text="En savoir plus" textFill="WHITE" />
          </children>
       </Pane>
    </bottom>
@@ -88,12 +88,12 @@
                            </graphic></Menu>
                      </menus>
                   </MenuBar>
-                  <Label layoutX="880.0" layoutY="21.0" text="roduits" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="suite" layoutX="880.0" layoutY="21.0" text="roduits" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label layoutX="844.0" layoutY="21.0" text="P" textFill="#00ccff">
+                  <Label fx:id="lettre" layoutX="844.0" layoutY="21.0" text="P" textFill="#00ccff">
                      <font>
                         <Font size="60.0" />
                      </font>
@@ -120,7 +120,7 @@
             </ToolBar>
          </top>
          <center>
-            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn prefWidth="422.9999694824219" text="Désignation" />
                   <TableColumn minWidth="0.0" prefWidth="149.0" text="Catégorie" />

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -15,7 +16,8 @@ import java.io.IOException;
  * Created by dziri on 28/02/17.
  */
 public class MenuController {
-
+    @FXML
+    protected Button envoyer;
     @FXML
     protected Label lettre;
     @FXML
@@ -28,6 +30,11 @@ public class MenuController {
     protected Button button3;
     @FXML
     protected Button button4;
+    @FXML
+    protected Hyperlink lient1;
+    @FXML
+    protected Hyperlink lient2;
+
     static protected boolean langue;
     @FXML
     private ImageView toBeOrToHave;
@@ -54,5 +61,13 @@ public class MenuController {
     }
     public void toBeOrToHave(){
         System.out.println("jjjjjjjjjjjjjjj");
+    }
+    public void anglais(){
+        lient1.setText("Who we are ?");
+        lient2.setText("to knew more");
+        button1.setText("Home");
+        button2.setText("Who are we?");
+        button3.setText("Product");
+        envoyer.setText("send");
     }
 }
