@@ -5,11 +5,10 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
@@ -120,15 +119,7 @@
             </ToolBar>
          </top>
          <center>
-            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-              <columns>
-                <TableColumn prefWidth="422.9999694824219" text="Désignation" />
-                  <TableColumn minWidth="0.0" prefWidth="149.0" text="Catégorie" />
-                <TableColumn minWidth="0.0" prefWidth="105.0" text="En stock ?" />
-                  <TableColumn minWidth="0.0" prefWidth="108.0" text="Promotion ?" />
-                  <TableColumn minWidth="0.0" prefWidth="183.0" text="Prix" />
-              </columns>
-            </TableView>
+            <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </center>
