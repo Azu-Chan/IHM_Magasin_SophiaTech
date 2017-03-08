@@ -1,22 +1,22 @@
 package fr.polytech.ihm.controller;
 
+import fr.polytech.ihm.modele.Modele;
+import fr.polytech.ihm.modele.Produit;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-
-
-
+import javafx.scene.control.ListView;
 
 /**
  * Created by dziri on 05/03/17.
  */
 public class ProduitController extends MenuController {
     @FXML
-    private TableView tableView;
+    private ListView<Produit> listView;
     @FXML
     public void initialize(){
         if (langue == true)
             anglais();
+        
+        listView.getItems().setAll(Modele.getProducts());
     }
 
     public void anglais() {
@@ -26,10 +26,5 @@ public class ProduitController extends MenuController {
         button1.setText("Home");
         button2.setText("Who are we?");
         button3.setText("Product");
-        
-        ((TableColumn) tableView.getColumns().get(0)).setText("Designation");
-        ((TableColumn) tableView.getColumns().get(1)).setText("Category");
-        ((TableColumn) tableView.getColumns().get(2)).setText("in stock?");
-        ((TableColumn) tableView.getColumns().get(4)).setText("price");
     }
 }

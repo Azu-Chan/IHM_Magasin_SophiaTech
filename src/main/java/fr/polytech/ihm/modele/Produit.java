@@ -6,13 +6,15 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import javafx.scene.image.Image;
+
 public class Produit {
 	private String designation;
 	private String categorie;
 	private boolean enStock;
 	private boolean enPromotion;
 	private float prix;
-	private BufferedImage image;
+	private Image image;
 	
 	public Produit(String designation, String categorie, boolean enStock, boolean enPromotion,
 			float prix, String cheminImage) throws IOException{
@@ -21,7 +23,7 @@ public class Produit {
 		this.enStock = enStock;
 		this.enPromotion = enPromotion;
 		this.prix = prix;
-		this.image = ImageIO.read(new File(cheminImage));
+		this.image = new Image(cheminImage);
 	}
 	
 	public void setDesignation(String d){
@@ -65,10 +67,10 @@ public class Produit {
 	}
 	
 	public void setImage(String c) throws IOException{
-		this.image = ImageIO.read(new File(c));
+		this.image = new Image(c);
 	}
 	
-	public BufferedImage getImage(){
+	public Image getImage(){
 		return this.image;
 	}
 }

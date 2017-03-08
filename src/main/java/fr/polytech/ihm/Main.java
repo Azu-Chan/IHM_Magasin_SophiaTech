@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import fr.polytech.ihm.modele.Modele;
+
 /**
  * Created by dziri on 26/02/17.
  */
@@ -16,6 +18,8 @@ public class Main extends Application {
 
         @Override
         public void start(Stage primaryStage) throws IOException{
+        	Modele.init();
+        	
         	new AdminView();
         	
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/accueil.fxml"));

@@ -16,7 +16,8 @@ public abstract class Modele {
 		categories.add("CD");
 		categories.add("DVD");
 		
-		produitList.add(new Produit("Louane", "CD", true, false, 9.99f, "src/main/ressources/images/produits/louane.jpg"));
+		produitList.add(new Produit("Louane", "CD", true, false, 9.99f, "/images/produits/louane.jpg"));
+		produitList.add(new Produit("bjr", "Livre", true, false, 15f, "/images/bienvenue.jpg"));
 	}
 	
 	public static List<Produit> getProducts(){
