@@ -14,14 +14,10 @@ public abstract class Modele {
 	}
 	
 	public static void init() throws IOException{
-		categories.add("Livre");
-		categories.add("CD");
-		categories.add("DVD");
-		
-		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , 2,40f, 9.0f, "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , 2,40f, 9.0f, "/images/produits/louane.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , 2,40f, 9.0f, "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , 2,40f, 9.0f, "/images/produits/louane.jpg","CD"));
+		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/nirvana.jpg","CD"));
+		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/louane.jpg","CD"));
+		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/nirvana.jpg","CD"));
+		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/louane.jpg","CD"));
 	}
 	
 	public static ObservableList<Produit> getProducts(){

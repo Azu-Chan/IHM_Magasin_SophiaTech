@@ -6,14 +6,14 @@ public class Produit {
 
 	private String description;
 	private String titre;
-	private int stock;
-	private float promotion;
-	private float prix;
+	private String stock;
+	private String promotion;
+	private String prix;
 	private String cheminImage;
 	private String nom;
 	
-	public Produit(String description, String titre, int stock, float promotion,
-			float prix, String cheminImage,String nom) throws IOException{
+	public Produit(String description, String titre, String stock, String promotion,
+			String prix, String cheminImage,String nom) throws IOException{
 		this.cheminImage = cheminImage;
 		this.description = description;
 		this.prix = prix;
@@ -38,27 +38,27 @@ public class Produit {
 		this.titre = titre;
 	}
 
-	public int getStock() {
+	public String getStock() {
 		return stock;
 	}
 
-	public void setStock(int stock) {
+	public void setStock(String stock) {
 		this.stock = stock;
 	}
 
-	public float getPromotion() {
+	public String getPromotion() {
 		return promotion;
 	}
 
-	public void setPromotion(float promotion) {
+	public void setPromotion(String promotion) {
 		this.promotion = promotion;
 	}
 
-	public float getPrix() {
+	public String getPrix() {
 		return prix;
 	}
 
-	public void setPrix(float prix) {
+	public void setPrix(String prix) {
 		this.prix = prix;
 	}
 
