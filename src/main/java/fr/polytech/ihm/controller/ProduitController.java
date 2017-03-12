@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -25,6 +26,9 @@ public class ProduitController extends MenuController {
     private int i = 0;
     @FXML
     private ListView listView;
+    @FXML
+    private ChoiceBox<String> choiceBox;
+    
     @FXML
     public void initialize() throws IOException {
         if (langue == true)
@@ -97,6 +101,7 @@ public class ProduitController extends MenuController {
              };
          });
 
-
+         
+         choiceBox.setItems(Modele.getCategories());
      }
 }

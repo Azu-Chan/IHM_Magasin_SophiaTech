@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ProduitController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ProduitController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -112,7 +112,7 @@
                   <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="179.0" text="En stock uniquement" />
                   <CheckBox mnemonicParsing="false" text="Promotion uniquement" />
                   <Separator orientation="VERTICAL" prefHeight="28.0" prefWidth="15.0" />
-                  <ChoiceBox prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
                   <Separator prefHeight="28.0" prefWidth="20.0" />
                   <Button mnemonicParsing="false" text="Appliquer filtres" />
                </items>

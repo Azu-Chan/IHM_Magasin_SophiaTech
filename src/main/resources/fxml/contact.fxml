@@ -115,7 +115,7 @@
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <top>
-            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre e-mail sera traiter dans les plus bref délais et vous receverai un message de réponse sur votre boite mail indéquer" textOverrun="CENTER_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre message sera traité dans les plus brefs délais, vous receverez une réponse sur l'adresse e-mail saisie." textOverrun="CENTER_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>
