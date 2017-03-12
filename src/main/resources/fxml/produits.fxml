@@ -83,7 +83,7 @@
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button fx:id="button4" blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
+                              <Button fx:id="button4" blendMode="DARKEN" mnemonicParsing="false" onAction="#contact" text="Contact" />
                            </graphic></Menu>
                      </menus>
                   </MenuBar>

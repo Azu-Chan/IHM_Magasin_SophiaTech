@@ -1,4 +1,5 @@
 package fr.polytech.ihm;
+import fr.polytech.ihm.modele.Modele;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,7 +13,9 @@ import java.io.IOException;
  */
 public class Main extends Application {
 
-        public static void main(String[] args) { launch(args); }
+        public static void main(String[] args) throws IOException {
+            Modele.init();
+            launch(args); }
 
         @Override
         public void start(Stage primaryStage) throws IOException{

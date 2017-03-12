@@ -6,12 +6,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AdminController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -38,7 +37,7 @@
          <bottom>
             <Pane prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
                      </image>
@@ -60,9 +59,9 @@
       </BorderPane>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="62.0" layoutY="40.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #35f49b;" text="AJOUTER PRODUIT">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Button mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" text="VOIR MESSAGES" BorderPane.alignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
@@ -70,7 +69,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="590.0" layoutY="40.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #6dc9ff;" text="MODIFIER PRODUIT">
+         </bottom>
+         <right>
+            <Button mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #ff3f0f;" text="SUPPRIMER PRODUIT" BorderPane.alignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
@@ -78,7 +79,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="1103.0" layoutY="40.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #ff3f0f;" text="SUPPRIMER PRODUIT">
+         </right>
+         <left>
+            <Button mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #6dc9ff;" text="MODIFIER PRODUIT" BorderPane.alignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
@@ -86,7 +89,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="62.0" layoutY="312.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" text="MISE A JOUR INFOS">
+         </left>
+         <top>
+            <Button mnemonicParsing="false" onAction="#ajout" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #35f49b;" text="AJOUTER PRODUIT" BorderPane.alignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
@@ -94,23 +99,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="590.0" layoutY="312.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" text="MISE A JOUR IMAGES">
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="1103.0" layoutY="312.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" text="VOIR MESSAGES">
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-      </AnchorPane>
+         </top>
+      </BorderPane>
    </center>
 </BorderPane>

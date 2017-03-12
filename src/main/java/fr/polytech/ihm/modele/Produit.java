@@ -1,72 +1,83 @@
 package fr.polytech.ihm.modele;
 
-import javafx.scene.image.Image;
-
 import java.io.IOException;
 
 public class Produit {
-	private String designation;
-	private String categorie;
-	private boolean enStock;
-	private boolean enPromotion;
+
+	private String description;
+	private String titre;
+	private int stock;
+	private float promotion;
 	private float prix;
-	private Image image;
+	private String cheminImage;
+	private String nom;
 	
-	public Produit(String designation, String categorie, boolean enStock, boolean enPromotion,
-			float prix, String cheminImage) throws IOException{
-		this.designation = designation;
-		this.categorie = categorie;
-		this.enStock = enStock;
-		this.enPromotion = enPromotion;
+	public Produit(String description, String titre, int stock, float promotion,
+			float prix, String cheminImage,String nom) throws IOException{
+		this.cheminImage = cheminImage;
+		this.description = description;
 		this.prix = prix;
-		this.image = new Image(cheminImage);
+		this.nom = nom;
+		this.promotion = promotion;
+		this.titre = titre;
+		this.stock = stock;
 	}
-	
-	public void setDesignation(String d){
-		this.designation = d;
+	public String getDescription() {
+		return description;
 	}
-	
-	public String getDesignation(){
-		return this.designation;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	
-	public void setCategorie(String c){
-		this.categorie = c;
+
+	public String getTitre() {
+		return titre;
 	}
-	
-	public String getCategorie(){
-		return this.categorie;
+
+	public void setTitre(String titre) {
+		this.titre = titre;
 	}
-	
-	public void setStock(boolean s){
-		this.enStock = s;
+
+	public int getStock() {
+		return stock;
 	}
-	
-	public boolean getStock(){
-		return this.enStock;
+
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
-	
-	public void setPromo(boolean p){
-		this.enPromotion = p;
+
+	public float getPromotion() {
+		return promotion;
 	}
-	
-	public boolean getPromo(){
-		return this.enPromotion;
+
+	public void setPromotion(float promotion) {
+		this.promotion = promotion;
 	}
-	
-	public void setPrix(float p){
-		this.prix = p;
+
+	public float getPrix() {
+		return prix;
 	}
-	
-	public float getPrix(){
-		return this.prix;
+
+	public void setPrix(float prix) {
+		this.prix = prix;
 	}
-	
-	public void setImage(String c) throws IOException{
-		this.image = new Image(c);
+
+	public String getCheminImage() {
+		return cheminImage;
 	}
-	
-	public Image getImage(){
-		return this.image;
+
+	public void setCheminImage(String cheminImage) {
+		this.cheminImage = cheminImage;
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+
+
 }

@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.QSNController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -26,28 +27,15 @@
    <bottom>
       <Pane prefHeight="145.0" prefWidth="1920.0" style="-fx-background-color: #002E78; -fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutX="1338.0" layoutY="-1.0" prefHeight="97.0" prefWidth="427.0">
-               <children>
-                  <Label fx:id="contact" prefHeight="30.0" text="Nous contacter :" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="30.0" text="Email :" textFill="WHITE" underline="true" />
-                  <TextField focusTraversable="false" />
-                  <Label prefHeight="30.0" text="Message :" textFill="WHITE" underline="true" />
-                  <TextArea focusTraversable="false" prefHeight="47.0" prefWidth="588.0" />
-                  <Button fx:id="envoyer" mnemonicParsing="false" text="Envoyer" />
-               </children>
-            </VBox>
+            <VBox layoutX="1338.0" layoutY="-1.0" prefHeight="97.0" prefWidth="427.0" />
             <Label layoutX="849.0" layoutY="115.0" prefHeight="17.0" prefWidth="220.0" text="Copyright 2017 To Be or To Have" textFill="WHITE" />
             <ImageView fitHeight="20.0" fitWidth="50.0" layoutX="828.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/16790432_10209955312417271_467153859_n.png" />
                </image>
             </ImageView>
-            <Hyperlink fx:id="lient1" focusTraversable="false" layoutX="388.0" layoutY="25.0" onAction="#quiSommesNous" text="Qui sommes nous ?" textFill="WHITE" />
-            <Hyperlink fx:id="lient2" focusTraversable="false" layoutX="404.0" layoutY="50.0" text="En savoir plus" textFill="WHITE" />
+            <Hyperlink fx:id="lient1" layoutX="388.0" layoutY="25.0" onAction="#quiSommesNous" text="Qui sommes nous ?" textFill="WHITE" />
+            <Hyperlink fx:id="lient2" layoutX="404.0" layoutY="50.0" text="En savoir plus" textFill="WHITE" />
          </children>
       </Pane>
    </bottom>
@@ -58,7 +46,7 @@
                <children>
                   <HBox alignment="TOP_RIGHT" layoutX="1720.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="167.0" prefWidth="115.0">
                      <children>
-                        <ImageView fx:id="anglais" accessibleRole="BUTTON" fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#anglais" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/grande_bretagne_1606.gif" />
                            </image>
@@ -66,7 +54,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <ImageView fx:id="francais" fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#francais" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/Flag_of_France.svg.png" />
                            </image>
@@ -89,11 +77,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <MenuBar accessibleRole="BUTTON" focusTraversable="false" layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;">
+                  <MenuBar layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;">
                      <menus>
-                        <Menu fx:id="id1">
+                        <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button fx:id="button1" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
+                              <Button fx:id="button1" blendMode="DARKEN" mnemonicParsing="false" onAction="#accueil" text="Accueil" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
@@ -101,20 +89,20 @@
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button fx:id="button3" blendMode="DARKEN" focusTraversable="false" mnemonicParsing="false" onAction="#produit" text="Produit" />
+                              <Button fx:id="button3" blendMode="DARKEN" mnemonicParsing="false" onAction="#produit" text="Produit" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button fx:id="button4" blendMode="DARKEN" mnemonicParsing="false" onAction="#contact" text="Contact" />
+                              <Button fx:id="button4" blendMode="DARKEN" mnemonicParsing="false" text="Contact" />
                            </graphic></Menu>
                      </menus>
                   </MenuBar>
-                  <Label fx:id="suite" layoutX="905.0" layoutY="19.0" text="ccueil" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="suite" layoutX="805.0" layoutY="18.0" text="ous contacter" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lettre" layoutX="863.0" layoutY="20.0" text="A" textFill="#00ccff">
+                  <Label fx:id="lettre" layoutX="750.0" layoutY="18.0" text="N" textFill="#00ccff">
                      <font>
                         <Font size="60.0" />
                      </font>
@@ -127,28 +115,34 @@
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <top>
-            <BorderPane prefHeight="371.0" prefWidth="1554.0" BorderPane.alignment="CENTER">
-               <left>
-                  <Button fx:id="id" mnemonicParsing="false" text="&lt;" BorderPane.alignment="CENTER" />
-               </left>
-               <right>
-                  <Button mnemonicParsing="false" onAction="#remplaceImage" text="&gt;" BorderPane.alignment="CENTER" />
-               </right>
-               <bottom>
-                  <Label text="SLOGan" BorderPane.alignment="CENTER" />
-               </bottom>
-               <center>
-                  <ImageView fx:id="bienvenue" fitHeight="337.0" fitWidth="547.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../images/bienvenue.jpg" />
-                     </image>
-                  </ImageView>
-               </center>
-            </BorderPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre e-mail sera traiter dans les plus bref délais et vous receverai un message de réponse sur votre boite mail indéquer" textOverrun="CENTER_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
          </top>
+         <center>
+            <VBox alignment="TOP_CENTER" maxWidth="500.0" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="736.0" text="E-mail :" />
+                  <TextField prefHeight="26.0" prefWidth="1134.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="736.0" text="Message :" />
+                  <TextArea prefHeight="549.0" prefWidth="500.0" />
+               </children>
+            </VBox>
+         </center>
          <bottom>
-            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-         </bottom>
-      </BorderPane>
+            <Button mnemonicParsing="false" prefWidth="100.0" text="Envoyer" BorderPane.alignment="CENTER" />
+         </bottom></BorderPane>
    </center>
 </BorderPane>

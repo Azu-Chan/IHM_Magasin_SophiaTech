@@ -1,5 +1,7 @@
 package fr.polytech.ihm.controller;
 
+import fr.polytech.ihm.modele.Modele;
+import fr.polytech.ihm.modele.Produit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,12 +15,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
+import java.util.List;
 
 
 /**
  * Created by dziri on 05/03/17.
  */
 public class ProduitController extends MenuController {
+    private int i = 0;
     @FXML
     private ListView listView;
     @FXML
@@ -38,8 +42,9 @@ public class ProduitController extends MenuController {
     }
 
      public void initP(){
+         List<Produit> produit = Modele.getProducts();
          ObservableList<String> items = FXCollections.observableArrayList (
-                 "1", "2","3");
+                 "3","4");
          listView.setItems(items);
          listView.setCellFactory((Object param) -> {
              return new ListCell<String>() {
@@ -57,22 +62,6 @@ public class ProduitController extends MenuController {
                              e.printStackTrace();
                          }
                          switch(name) {
-                             case "1":
-                                 setGraphic(borderPane);
-                                 ((ImageView) borderPane.getLeft()).setImage(new Image("/images/produits/nirvana.jpg"));
-                                 Label label = new Label("azassqsqsd\nqddsqdqsd\n\n\nfssdfdfsdf");
-                                 label.setWrapText(true);
-                                 label.setAlignment(Pos.CENTER);
-                                 borderPane.setCenter(label);
-                                 break;
-                             case "2":
-                                 setGraphic(borderPane);
-                                 ((ImageView) borderPane.getLeft()).setImage(new Image("/images/produits/louane.jpg"));
-                                 Label label1 = new Label("azassqsqsd\nqddsqdqsd\n\n\nfssdfdfsdf");
-                                 label1.setWrapText(true);
-                                 label1.setAlignment(Pos.CENTER);
-                                 borderPane.setCenter(label1);
-                                 break;
                              case "3":
                                  setGraphic(borderPane);
                                  ((ImageView) borderPane.getLeft()).setImage(new Image("/images/produits/Opticks.jpg"));
@@ -81,9 +70,26 @@ public class ProduitController extends MenuController {
                                  label2.setAlignment(Pos.CENTER);
                                  borderPane.setCenter(label2);
                                  break;
+                             case "4":
+                                 setGraphic(borderPane);
+                                 ((ImageView) borderPane.getLeft()).setImage(new Image(produit.get(i).getCheminImage()));
+                                 Label label3 = new Label("description du produit : "+produit.get(i).getDescription()+
+                                 "\ntype : "+produit.get(i).getNom()+"\ntitre : "+produit.get(i).getTitre()+"\nprix : "+produit.get(i).getPrix()+"£"+
+                                 "\npromotion : "+produit.get(i).getPromotion()+"%"+"\nen stock : "+produit.get(i).getStock());
+                                 label3.setWrapText(true);
+                                 label3.setAlignment(Pos.CENTER);
+                                 borderPane.setCenter(label3);
+                                 if(i < produit.size()-1){
+                                     items.add("4");
+                                     i++;
+                                 }
+                                 break;
+                                 default:break;
+
 
 
                          }
+                         //System.out.println(name);
                          //borderPane.setCenter(borderPane);
                          setGraphic(borderPane);
                      }
