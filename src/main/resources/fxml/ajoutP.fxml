@@ -27,7 +27,7 @@
                         <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
                      </image>
                   </ImageView>
-                  <MenuBar layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" stylesheets="@ihmEnseigne.css" />
+                  <MenuBar layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" />
                   <Label layoutX="851.0" layoutY="21.0" text="jout produit" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
@@ -46,7 +46,9 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="label" text="chemain de l'image" />
+            <Label text="Type" />
+            <TextField fx:id="nom" />
+            <Label text="chemain de l'image" />
             <TextField fx:id="chemain" />
             <Label fx:id="label1" prefHeight="16.0" prefWidth="536.0" text="Titre" />
             <TextField fx:id="titre" prefHeight="26.0" prefWidth="922.0" />
@@ -62,7 +64,7 @@
       </VBox>
    </center>
    <bottom>
-      <Button fx:id="valider" alignment="CENTER" mnemonicParsing="false" text="Valider" BorderPane.alignment="CENTER">
+      <Button alignment="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#valider" text="Valider" BorderPane.alignment="CENTER">
          <font>
             <Font size="32.0" />
          </font>
