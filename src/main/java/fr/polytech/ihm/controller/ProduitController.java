@@ -46,6 +46,8 @@ public class ProduitController extends MenuController {
     }
 
      public void initP(){
+    	 choiceBox.setItems(Modele.getCategories());
+    	 
          List<Produit> produit = Modele.getProducts();
          ObservableList<String> items = FXCollections.observableArrayList (
                  "3","4");
@@ -101,7 +103,5 @@ public class ProduitController extends MenuController {
              };
          });
 
-         
-         choiceBox.setItems(Modele.getCategories());
      }
 }

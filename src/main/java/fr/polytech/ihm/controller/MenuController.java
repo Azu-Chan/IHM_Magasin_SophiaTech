@@ -71,10 +71,10 @@ public class MenuController {
     }
     public void anglais(){
         lient1.setText("Who we are ?");
-        lient2.setText("to knew more");
+        lient2.setText("To knew more");
         button1.setText("Home");
         button2.setText("Who are we?");
-        button3.setText("Product");
-        envoyer.setText("send");
+        button3.setText("Products");
+        envoyer.setText("Send");
     }
 }

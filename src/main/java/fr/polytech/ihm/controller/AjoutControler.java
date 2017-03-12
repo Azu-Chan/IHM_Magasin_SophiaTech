@@ -29,7 +29,6 @@ public class AjoutControler {
 
     public void valider() throws IOException {
         Modele.getProducts().add(new Produit(description.getText(), titre.getText(), nbp.getText(), promotion.getText(), prix.getText(), chemain.getText(), nom.getText()));
-        System.out.println("sqdsdssqdqsd");
         chemain.setText("");
         titre.setText("");
         nbp.setText("");

@@ -14,6 +14,14 @@ public abstract class Modele {
 	}
 	
 	public static void init() throws IOException{
+		categories.add("aaaaaaaaaaaaa");
+		categories.add("aaaaaaaaaaaaa");
+		categories.add("aaaaaaaaaaaaa");
+		categories.add("aaaaaaaaaaaaa");
+		categories.add("aaaaaaaaaaaaa");
+		categories.add("aaaaaaaaaaaaa");
+		categories.add("aaaaaaaaaaaaa");
+		
 		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/nirvana.jpg","CD"));
 		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/louane.jpg","CD"));
 		produitList.add(new Produit("ttttttttttttttttttt", "le monde" , "2","40", "9.0", "/images/produits/nirvana.jpg","CD"));
