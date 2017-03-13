@@ -2,18 +2,12 @@ package fr.polytech.ihm.controller;
 
 import fr.polytech.ihm.modele.Modele;
 import fr.polytech.ihm.modele.Produit;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.image.Image;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,7 +19,7 @@ import java.util.List;
 public class ProduitController extends MenuController {
     private int i = 0;
     @FXML
-    private ListView listView;
+    private TableView tableView;
     @FXML
     private ChoiceBox<String> choiceBox;
     
@@ -45,63 +39,40 @@ public class ProduitController extends MenuController {
         suite.setText("roducts");
     }
 
+
      public void initP(){
     	 choiceBox.setItems(Modele.getCategories());
-    	 
+
          List<Produit> produit = Modele.getProducts();
-         ObservableList<String> items = FXCollections.observableArrayList (
-                 "3","4");
-         listView.setItems(items);
-         listView.setCellFactory((Object param) -> {
-             return new ListCell<String>() {
-                 private BorderPane borderPane;
-                 @Override
-                 public void updateItem(String name, boolean empty) {
-                     super.updateItem(name, empty);
-                     if (empty) {
-                         setText(null);
-                         setGraphic(null);
-                     } else {
-                         try {
-                             borderPane =new FXMLLoader(getClass().getResource("/fxml/description_produit.fxml")).load();
-                         } catch (IOException e) {
-                             e.printStackTrace();
-                         }
-                         switch(name) {
-                             case "3":
-                                 setGraphic(borderPane);
-                                 ((ImageView) borderPane.getLeft()).setImage(new Image("/images/produits/Opticks.jpg"));
-                                 Label label2 = new Label("azassqsqsd\nqddsqdqsd\n\n\nfssdfdfsdf");
-                                 label2.setWrapText(true);
-                                 label2.setAlignment(Pos.CENTER);
-                                 borderPane.setCenter(label2);
-                                 break;
-                             case "4":
-                                 setGraphic(borderPane);
-                                 ((ImageView) borderPane.getLeft()).setImage(new Image(produit.get(i).getCheminImage()));
-                                 Label label3 = new Label("description du produit : "+produit.get(i).getDescription()+
-                                 "\ntype : "+produit.get(i).getNom()+"\ntitre : "+produit.get(i).getTitre()+"\nprix : "+produit.get(i).getPrix()+"£"+
-                                 "\npromotion : "+produit.get(i).getPromotion()+"%"+"\nen stock : "+produit.get(i).getStock());
-                                 label3.setWrapText(true);
-                                 label3.setAlignment(Pos.CENTER);
-                                 borderPane.setCenter(label3);
-                                 if(i < produit.size()-1){
-                                     items.add("4");
-                                     i++;
-                                 }
-                                 break;
-                                 default:break;
+         TableColumn<Produit, String> titre = new TableColumn<>("Titre");
+         titre.setCellValueFactory(new PropertyValueFactory<>("titre"));
+         titre.setMinWidth(200);
 
+         TableColumn<Produit, String> stock = new TableColumn<>("Stock");
+         stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+         stock.setMinWidth(200);
 
+         TableColumn<Produit, String> description = new TableColumn<>("Description");
+         description.setCellValueFactory(new PropertyValueFactory<>("description"));
+         description.setMinWidth(200);
 
-                         }
-                         //System.out.println(name);
-                         //borderPane.setCenter(borderPane);
-                         setGraphic(borderPane);
-                     }
-                 }
-             };
-         });
+         TableColumn<Produit, String> promotion = new TableColumn<>("Promotion");
+         promotion.setCellValueFactory(new PropertyValueFactory<>("promotion"));
+         promotion.setMinWidth(200);
 
+         TableColumn<Produit, String> prix = new TableColumn<>("Prix");
+         prix.setCellValueFactory(new PropertyValueFactory<>("prix"));
+         prix.setMinWidth(200);
+
+         TableColumn<Produit, String> nom = new TableColumn<>("Type");
+         nom.setCellValueFactory(new PropertyValueFactory<>("nom"));
+         nom.setMinWidth(200);
+
+         TableColumn<Produit, ImageView> cheminImage = new TableColumn<>("Image");
+         cheminImage.setCellValueFactory(new PropertyValueFactory<>("cheminImage"));
+         cheminImage.setMinWidth(200);
+         tableView.getColumns().addAll(cheminImage,nom,titre,stock,promotion,prix,description);
+         tableView.setItems(Modele.getProducts());
+         tableView.setVisible(true);
      }
 }
