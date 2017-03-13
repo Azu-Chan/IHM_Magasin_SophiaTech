@@ -1,5 +1,8 @@
 package fr.polytech.ihm.modele;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
 public class Produit {
@@ -9,16 +12,18 @@ public class Produit {
 	private String stock;
 	private String promotion;
 	private String prix;
-	private String cheminImage;
+	private ImageView cheminImage;
 	private String nom;
 	
 	public Produit(String description, String titre, String stock, String promotion,
 			String prix, String cheminImage,String nom) throws IOException{
-		this.cheminImage = cheminImage;
+		this.cheminImage = new ImageView(new Image(cheminImage));
+		this.cheminImage.setFitWidth(150);
+		this.cheminImage.setFitHeight(150);
 		this.description = description;
-		this.prix = prix;
+		this.prix = prix+"£";
 		this.nom = nom;
-		this.promotion = promotion;
+		this.promotion = promotion+"%";
 		this.titre = titre;
 		this.stock = stock;
 	}
@@ -62,12 +67,12 @@ public class Produit {
 		this.prix = prix;
 	}
 
-	public String getCheminImage() {
+	public ImageView getCheminImage() {
 		return cheminImage;
 	}
 
 	public void setCheminImage(String cheminImage) {
-		this.cheminImage = cheminImage;
+		this.cheminImage = new ImageView(new Image(cheminImage));
 	}
 
 	public String getNom() {
