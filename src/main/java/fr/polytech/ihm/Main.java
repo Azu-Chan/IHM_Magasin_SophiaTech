@@ -14,14 +14,13 @@ import java.io.IOException;
 public class Main extends Application {
 
         public static void main(String[] args) throws IOException {
-        	Modele.init();
             launch(args); 
         }
 
         @Override
         public void start(Stage primaryStage) throws IOException{
         	new AdminView();
-        	
+            Modele.init();
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/accueil.fxml"));
             primaryStage.setTitle("IHM_CLIENT");
             primaryStage.setScene(new Scene(root,1920,1080));
