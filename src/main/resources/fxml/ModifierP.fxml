@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AdminController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ProduitController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -60,46 +63,32 @@
    </top>
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <TableView fx:id="tableView" prefHeight="655.0" prefWidth="857.0" BorderPane.alignment="CENTER" />
+         </left>
          <bottom>
-            <Button mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" text="VOIR MESSAGES" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
+            <Button mnemonicParsing="false" onAction="#modif" text="enregistrer" BorderPane.alignment="BOTTOM_RIGHT" />
          </bottom>
          <right>
-            <Button mnemonicParsing="false" onAction="#supP" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #ff3f0f;" text="SUPPRIMER PRODUIT" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
+            <VBox prefHeight="629.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="Type" />
+                  <TextField fx:id="type" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="Chemain de l'image" />
+                  <TextField fx:id="image" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="Titre" />
+                  <TextField fx:id="titre" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="Nombre de Produit en stock" />
+                  <TextField fx:id="nbp" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="Prix" />
+                  <TextField fx:id="prix" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="Promotion" />
+                  <TextField fx:id="promotion" />
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="741.0" text="description" />
+                  <TextArea fx:id="description" prefHeight="505.0" prefWidth="698.0" />
+               </children>
+            </VBox>
          </right>
-         <left>
-            <Button mnemonicParsing="false" onAction="#modifP" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #6dc9ff;" text="MODIFIER PRODUIT" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </left>
-         <top>
-            <Button mnemonicParsing="false" onAction="#ajout" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #35f49b;" text="AJOUTER PRODUIT" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="25.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </top>
       </BorderPane>
    </center>
 </BorderPane>
