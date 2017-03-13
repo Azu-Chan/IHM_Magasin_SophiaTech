@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public abstract class Modele {
-	private static ObservableList<Produit> produitList = FXCollections.observableList(new ArrayList());
+	private static ObservableList<Produit> produitList = FXCollections.observableList(new ArrayList<>());
+	private static ObservableList<String> categories = FXCollections.observableList(new ArrayList<>());
 	
 	private Modele(){
 	}
@@ -27,4 +28,7 @@ public abstract class Modele {
 		return produitList;
 	}
 
+	public static ObservableList<String> getCategories(){
+		return categories;
+	}
 }

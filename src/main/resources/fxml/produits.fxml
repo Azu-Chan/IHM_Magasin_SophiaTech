@@ -112,7 +112,7 @@
                   <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="179.0" text="En stock uniquement" />
                   <CheckBox mnemonicParsing="false" text="Promotion uniquement" />
                   <Separator orientation="VERTICAL" prefHeight="28.0" prefWidth="15.0" />
-                  <ChoiceBox prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox" prefWidth="150.0" />
                   <Separator prefHeight="28.0" prefWidth="20.0" />
                   <Button mnemonicParsing="false" text="Appliquer filtres" />
                </items>

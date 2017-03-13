@@ -3,6 +3,7 @@ package fr.polytech.ihm.controller;
 import fr.polytech.ihm.modele.Modele;
 import fr.polytech.ihm.modele.Produit;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -20,6 +21,9 @@ public class ProduitController extends MenuController {
     @FXML
     private TableView tableView;
     @FXML
+    private ChoiceBox<String> choiceBox;
+    
+    @FXML
     public void initialize() throws IOException {
         if (langue == true)
             anglais();
@@ -35,7 +39,10 @@ public class ProduitController extends MenuController {
         suite.setText("roducts");
     }
 
-     public void initP() {
+
+     public void initP(){
+    	 choiceBox.setItems(Modele.getCategories());
+
          List<Produit> produit = Modele.getProducts();
          TableColumn<Produit, String> titre = new TableColumn<>("Titre");
          titre.setCellValueFactory(new PropertyValueFactory<>("titre"));

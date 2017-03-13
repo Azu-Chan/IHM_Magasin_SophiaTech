@@ -37,6 +37,7 @@ public class AccueilController extends MenuController{
         langue=true;
         lettre.setText("H");
         suite.setText("ome");
+        button1.setText("Home");
     }
     public void francais(){
         langue=false;
@@ -44,7 +45,7 @@ public class AccueilController extends MenuController{
         suite.setText("ccueil");
         button1.setText("Accueil");
         button2.setText("Qui sommes nous?");
-        button3.setText("Produit");
+        button3.setText("Produits");
         lient1.setText("Qui sommes nous ?");
         lient2.setText("En savoir plus");
 
