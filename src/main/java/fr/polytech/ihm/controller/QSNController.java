@@ -1,8 +1,9 @@
 package fr.polytech.ihm.controller;
 
+import java.net.URL;
+
 import javafx.fxml.FXML;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 /**
@@ -12,15 +13,14 @@ public class QSNController extends MenuController {
 	@FXML
 	private BorderPane borderp;
 	
-	private WebEngine webEngine;
-	
     @FXML
     public void initialize(){
         if(langue)
             this.anglais();
         
         WebView webView = new WebView();
-        webView.getEngine().load("https://luscious.net/c/trap_manga/");
+        URL url = getClass().getResource("/HTML/qsn.html");
+        webView.getEngine().load(url.toExternalForm());
         
         borderp.setCenter(webView);
     }
