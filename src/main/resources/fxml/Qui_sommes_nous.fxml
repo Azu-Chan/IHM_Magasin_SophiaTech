@@ -47,7 +47,7 @@
                </image>
             </ImageView>
             <Hyperlink fx:id="lient1" layoutX="388.0" layoutY="25.0" onAction="#quiSommesNous" text="Qui sommes nous ?" textFill="WHITE" />
-            <Hyperlink fx:id="lient2" layoutX="404.0" layoutY="50.0" text="En savoir plus" textFill="WHITE" />
+            <Hyperlink fx:id="lient2" layoutX="404.0" layoutY="50.0" onAction="#esp" text="En savoir plus" textFill="WHITE" />
          </children>
       </Pane>
    </bottom>
@@ -109,12 +109,12 @@
                            </graphic></Menu>
                      </menus>
                   </MenuBar>
-                  <Label fx:id="suite" layoutX="805.0" layoutY="18.0" text="ui sommes nous ?" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="suite" layoutX="765.0" layoutY="14.0" text="ui sommes nous ?" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lettre" layoutX="750.0" layoutY="18.0" text="Q" textFill="#00ccff">
+                  <Label fx:id="lettre" layoutX="718.0" layoutY="14.0" text="Q" textFill="#00ccff">
                      <font>
                         <Font size="60.0" />
                      </font>
