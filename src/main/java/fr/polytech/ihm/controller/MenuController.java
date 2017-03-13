@@ -66,6 +66,13 @@ public class MenuController {
         stage.setScene(scene);
         stage.show();
     }
+    public void esp() throws IOException {
+    	Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/enSavoirP.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public void toBeOrToHave(){
         System.out.println("jjjjjjjjjjjjjjj");
     }

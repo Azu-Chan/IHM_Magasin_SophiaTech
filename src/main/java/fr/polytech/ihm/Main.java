@@ -38,6 +38,6 @@ class AdminView {
     	Stage subStage = new Stage();
     	subStage.setTitle("IHM_ADMIN");
     	subStage.setScene(new Scene(root,1920,1080));
-    	subStage .show();
+    	subStage.show();
     }
 }
