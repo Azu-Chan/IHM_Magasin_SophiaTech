@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1070.0" prefWidth="1884.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AdminController">
+   <children>
+      <Pane layoutX="-7.0" layoutY="-5.0" prefHeight="33.0" prefWidth="1920.0" style="-fx-background-color: #002054;" />
+      <Pane layoutY="16.0" prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;">
+         <children>
+            <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
+               </image>
+            </ImageView>
+            <MenuBar layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" stylesheets="@ihmEnseigne.css" />
+            <Label layoutX="851.0" layoutY="21.0" text="dministration" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+            <Label layoutX="809.0" layoutY="21.0" text="A" textFill="#00ccff">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="389.0" layoutY="486.0" mnemonicParsing="false" onAction="#modifP" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #6dc9ff;" text="MODIFIER PRODUIT">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="858.0" layoutY="223.0" mnemonicParsing="false" onAction="#ajout" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #35f49b;" text="AJOUTER PRODUIT">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="1329.0" layoutY="489.0" mnemonicParsing="false" onAction="#supP" prefHeight="210.0" prefWidth="374.0" style="-fx-background-color: #ff3f0f;" text="SUPPRIMER PRODUIT">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="862.0" layoutY="726.0" mnemonicParsing="false" prefHeight="210.0" prefWidth="374.0" text="VOIR MESSAGES">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutX="1.0" layoutY="923.0" prefHeight="145.0" prefWidth="1884.0" style="-fx-background-color: #002E78; -fx-border-color: black;">
+         <children>
+            <Label layoutX="972.0" layoutY="111.0" prefHeight="17.0" prefWidth="220.0" text="Copyright 2017 To Be or To Have" textFill="WHITE" />
+            <ImageView fitHeight="20.0" fitWidth="50.0" layoutX="941.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/16790432_10209955312417271_467153859_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -37,7 +37,7 @@ public class MenuController {
 
     static protected boolean langue;
     @FXML
-    private ImageView toBeOrToHave;
+    protected ImageView toBeOrToHave;
     public void produit() throws IOException {
         Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/produits.fxml"));
