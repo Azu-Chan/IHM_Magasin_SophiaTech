@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ContactController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ContactController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -108,13 +108,13 @@
             <VBox alignment="TOP_CENTER" maxWidth="500.0" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER">
                <children>
                   <Label alignment="CENTER" prefHeight="16.0" prefWidth="736.0" text="E-mail :" />
-                  <TextField prefHeight="26.0" prefWidth="1134.0">
+                  <TextField fx:id="mailText" prefHeight="26.0" prefWidth="1134.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
                   <Label alignment="CENTER" prefHeight="16.0" prefWidth="736.0" text="Message :" />
-                  <TextArea prefHeight="549.0" prefWidth="500.0" />
+                  <TextArea fx:id="contentText" prefHeight="549.0" prefWidth="500.0" />
                </children>
             </VBox>
          </center>

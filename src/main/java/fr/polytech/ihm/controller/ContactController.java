@@ -1,7 +1,14 @@
 package fr.polytech.ihm.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import fr.polytech.ihm.modele.Message;
+import fr.polytech.ihm.modele.Modele;
+import javafx.event.*;
 
 /**
  * Created by dziri on 15/03/17.
@@ -13,10 +20,36 @@ public class ContactController extends MenuController {
     private Label suite;
     @FXML
     private Label lable;
+    
+    @FXML
+    private TextField mailText;
+    @FXML
+    private TextArea contentText;
+    @FXML
+    private Button envoyer;
     @FXML
     public void initialize(){
         if(langue)
             anglais();
+        
+        envoyer.setOnMouseClicked(new EventHandler<MouseEvent>(){
+			@Override
+			public void handle(MouseEvent arg0) {
+				boolean ok = true;
+				
+				if(mailText.getText().replaceAll(" |\t", "").length() == 0)
+					ok = false;
+				
+				if(contentText.getText().replaceAll(" |\n|\t", "").length() == 0)
+					ok = false;
+				
+				if(ok){
+					Modele.getMessages().add(new Message(mailText.getText(), contentText.getText()));
+					mailText.clear();
+					contentText.clear();
+				}
+			}
+        });
     }
     public void anglais(){
         langue=true;
