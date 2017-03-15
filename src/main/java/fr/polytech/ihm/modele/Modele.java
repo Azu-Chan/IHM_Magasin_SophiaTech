@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public abstract class Modele {
 	private static ObservableList<Produit> produitList = FXCollections.observableList(new ArrayList<>());
-	private static ObservableList<String> categories = FXCollections.observableList(new ArrayList<>());
+	private static ObservableList<Message> messageList = FXCollections.observableList(new ArrayList<>());
 	
 	private Modele(){
 	}
@@ -27,8 +27,8 @@ public abstract class Modele {
 	public static ObservableList<Produit> getProducts(){
 		return produitList;
 	}
-
-	public static ObservableList<String> getCategories(){
-		return categories;
+	
+	public static ObservableList<Message> getMessages(){
+		return messageList;
 	}
 }
