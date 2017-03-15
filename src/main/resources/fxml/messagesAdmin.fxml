@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.MessageController">
+   <left>
+      <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="680.0" prefWidth="196.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="145.0" prefWidth="1920.0" style="-fx-background-color: #002E78; -fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="849.0" layoutY="115.0" prefHeight="17.0" prefWidth="220.0" text="Copyright 2017 To Be or To Have" textFill="WHITE" />
+            <ImageView fitHeight="20.0" fitWidth="50.0" layoutX="828.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/16790432_10209955312417271_467153859_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+      <BorderPane prefHeight="197.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <top>
+            <Pane prefHeight="33.0" prefWidth="1920.0" style="-fx-background-color: #002054;" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <Pane prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
+                     </image>
+                  </ImageView>
+                  <MenuBar layoutY="129.0" prefHeight="38.0" prefWidth="1920.0" style="-fx-background-color: #0096CA;" stylesheets="@ihmEnseigne.css" />
+                  <Label layoutX="811.0" layoutY="21.0" text="essages reçus" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="761.0" layoutY="20.0" text="M" textFill="#00ccff">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="tableView" prefHeight="655.0" prefWidth="857.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

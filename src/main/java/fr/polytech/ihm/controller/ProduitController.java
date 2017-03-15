@@ -93,6 +93,7 @@ public class ProduitController extends MenuController {
          tableView.setItems(Modele.getProducts());
          tableView.setVisible(true);
      }
+     
     public void modif(){
         tableView.getSelectionModel().setCellSelectionEnabled(true);
         Object selectedCells = tableView.getSelectionModel().getSelectedItem();
@@ -114,12 +115,14 @@ public class ProduitController extends MenuController {
         description.setText("");
         type.setText("");
     }
+    
     public void sup(){
         tableView.getSelectionModel().setCellSelectionEnabled(true);
         Object selectedCells = tableView.getSelectionModel().getSelectedItem();
         Produit produitSelect = (Produit)selectedCells;
        Modele.getProducts().remove(produitSelect);
     }
+    
     public void retour() throws IOException {
         Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/admin.fxml"));

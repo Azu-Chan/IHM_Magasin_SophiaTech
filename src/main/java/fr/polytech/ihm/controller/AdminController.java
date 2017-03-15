@@ -52,6 +52,10 @@ public class AdminController {
     }
     
     public void showMessages() throws IOException {
-        
+    	Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/messagesAdmin.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
