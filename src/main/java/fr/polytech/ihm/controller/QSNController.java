@@ -29,6 +29,7 @@ public class QSNController extends MenuController {
         
         borderp.setCenter(webView);
     }
+    
     @Override
     public void anglais(){
         lettre.setText("W");

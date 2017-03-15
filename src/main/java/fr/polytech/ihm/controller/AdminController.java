@@ -34,11 +34,24 @@ public class AdminController {
         stage.setScene(scene);
         stage.show();
     }
+    
     public void supP() throws IOException {
         Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/supP.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    
+    public void showStats() throws IOException {
+    	Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/stats.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public void showMessages() throws IOException {
+        
     }
 }

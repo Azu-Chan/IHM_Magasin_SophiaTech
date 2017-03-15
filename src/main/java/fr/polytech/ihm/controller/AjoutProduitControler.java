@@ -33,6 +33,7 @@ public class AjoutProduitControler {
     private TextField nom;
     @FXML
     private ImageView toBeOrToHave;
+    
     public void valider() throws IOException {
         Modele.getProducts().add(new Produit(description.getText(), titre.getText(), nbp.getText(), promotion.getText(), prix.getText(), chemain.getText(), nom.getText()));
         chemain.setText("");
@@ -43,6 +44,7 @@ public class AjoutProduitControler {
         description.setText("");
         nom.setText("");
     }
+    
     public void retour() throws IOException {
         Stage stage=(Stage) toBeOrToHave.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/admin.fxml"));

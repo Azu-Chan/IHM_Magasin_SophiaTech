@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <script type="text/javascript" src="./loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(CA);
+      google.charts.setOnLoadCallback(PR);
+      google.charts.setOnLoadCallback(PS);
+
+      function CA() {
+        var data = google.visualization.arrayToDataTable([
+          ['Periode', 'Chiffre d\'affaire'],
+          ['01/2016',  98000],
+          ['02/2016',  85000],
+          ['03/2016',  53000],
+          ['04/2016',  55000],
+          ['05/2016',  56000],
+          ['06/2016',  60000],
+          ['07/2016',  82000],
+          ['08/2016',  86000],
+          ['09/2016',  71000],
+          ['10/2016',  76000],
+          ['11/2016',  58000],
+          ['12/2016',  123000],
+          ['01/2017',  111000],
+          ['02/2017',  89000],
+        ]);
+
+        var options = {
+          title: 'Chiffre d\'affaire (euros)',
+          hAxis: {title: 'Periode',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0},
+          colors: ['#20a33d']
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('CA_div'));
+        chart.draw(data, options);
+      }
+
+      function PR() {
+        var data = google.visualization.arrayToDataTable([
+          ['Periode', 'Produits renvoyes'],
+          ['01/2016',  389],
+          ['02/2016',  254],
+          ['03/2016',  202],
+          ['04/2016',  56],
+          ['05/2016',  32],
+          ['06/2016',  112],
+          ['07/2016',  189],
+          ['08/2016',  218],
+          ['09/2016',  123],
+          ['10/2016',  98],
+          ['11/2016',  21],
+          ['12/2016',  7],
+          ['01/2017',  299],
+          ['02/2017',  176],
+        ]);
+
+        var options = {
+          title: 'Produits renvoyes',
+          hAxis: {title: 'Periode',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0},
+          colors: ['#999695']
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('PR_div'));
+        chart.draw(data, options);
+      }
+
+      function PS() {
+        var data = google.visualization.arrayToDataTable([
+          ['Periode', 'Produits soldes'],
+          ['01/2016',  546],
+          ['02/2016',  333],
+          ['03/2016',  254],
+          ['04/2016',  88],
+          ['05/2016',  67],
+          ['06/2016',  112],
+          ['07/2016',  156],
+          ['08/2016',  218],
+          ['09/2016',  98],
+          ['10/2016',  76],
+          ['11/2016',  45],
+          ['12/2016',  879],
+          ['01/2017',  550],
+          ['02/2017',  289],
+        ]);
+
+        var options = {
+          title: 'Produits soldes',
+          hAxis: {title: 'Periode',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0},
+          colors: ['#ff4538']
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('PS_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="CA_div" style="width: 100%; height: 500px;"></div>
+    <div id="PR_div" style="width: 100%; height: 500px;"></div>
+    <div id="PS_div" style="width: 100%; height: 500px;"></div>
+  </body>
+</html>
