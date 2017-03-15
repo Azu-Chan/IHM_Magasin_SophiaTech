@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -125,30 +125,23 @@
       </BorderPane>
    </top>
    <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <top>
-            <BorderPane prefHeight="371.0" prefWidth="1554.0" BorderPane.alignment="CENTER">
-               <left>
-                  <Button fx:id="id" mnemonicParsing="false" text="&lt;" BorderPane.alignment="CENTER" />
-               </left>
-               <right>
-                  <Button mnemonicParsing="false" onAction="#remplaceImage" text="&gt;" BorderPane.alignment="CENTER" />
-               </right>
-               <bottom>
-                  <Label text="SLOGan" BorderPane.alignment="CENTER" />
-               </bottom>
-               <center>
-                  <ImageView fx:id="bienvenue" fitHeight="337.0" fitWidth="547.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../images/bienvenue.jpg" />
-                     </image>
-                  </ImageView>
-               </center>
-            </BorderPane>
-         </top>
+      <BorderPane prefHeight="371.0" prefWidth="1554.0" BorderPane.alignment="CENTER">
+         <left>
+            <Button mnemonicParsing="false" onAction="#remplaceImageDown" text="&lt;" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button mnemonicParsing="false" onAction="#remplaceImageUp" text="&gt;" BorderPane.alignment="CENTER" />
+         </right>
          <bottom>
-            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <Label prefHeight="158.0" prefWidth="937.0" text="Ceci est le slogan de To be or to Have, merci de ne pas le copier !" textFill="#478cd0" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="DejaVu Serif" size="28.0" />
+               </font>
+            </Label>
          </bottom>
+         <center>
+            <ImageView fx:id="bienvenue" fitHeight="416.0" fitWidth="707.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
       </BorderPane>
    </center>
 </BorderPane>
