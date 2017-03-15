@@ -19,7 +19,12 @@ public class QSNController extends MenuController {
             this.anglais();
         
         WebView webView = new WebView();
-        URL url = getClass().getResource("/HTML/qsn.html");
+        URL url;
+        if(!langue)
+        	url = getClass().getResource("/HTML/qsn.html");
+        else
+        	url = getClass().getResource("/HTML/qsnEng.html");
+        
         webView.getEngine().load(url.toExternalForm());
         
         borderp.setCenter(webView);

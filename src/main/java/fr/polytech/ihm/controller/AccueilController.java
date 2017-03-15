@@ -22,6 +22,7 @@ public class AccueilController extends MenuController{
         listeOfImage = new ArrayList<>();
         listeOfImage.add("/images/bienvenue.jpg");
         listeOfImage.add("/images/promotion.png");
+        
         if(langue)
             anglais();
 
@@ -32,6 +33,7 @@ public class AccueilController extends MenuController{
             cpt = 0;
         bienvenue.setImage(new Image(listeOfImage.get(cpt)));
     }
+    
     public void anglais(){
         super.anglais();
         langue=true;
@@ -39,6 +41,7 @@ public class AccueilController extends MenuController{
         suite.setText("ome");
         button1.setText("Home");
     }
+    
     public void francais(){
         langue=false;
         lettre.setText("A");
@@ -48,6 +51,5 @@ public class AccueilController extends MenuController{
         button3.setText("Produits");
         lient1.setText("Qui sommes nous ?");
         lient2.setText("En savoir plus");
-
     }
 }
