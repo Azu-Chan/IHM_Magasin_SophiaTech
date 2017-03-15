@@ -14,15 +14,9 @@ public abstract class Modele {
 	}
 	
 	public static void init() throws IOException{
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "1","23", "9.0", "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "2","40", "9.0", "/images/produits/louane.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "3","30", "9.0", "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "6","11", "9.0", "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "8","3", "9.0", "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "8","77", "9.0", "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "1","99", "9.0", "/images/produits/nirvana.jpg","CD"));
-		produitList.add(new Produit("ttttttttttttttttttt","le monde" , "0","1", "9.0", "/images/produits/louane.jpg","CD"));
-	}
+		produitList.add(new Produit("Le célèbre album de \nnirvana comme as you are.","Come As you are" , "oui","33", "10", "/images/produits/nirvana.jpg","CD"));
+		produitList.add(new Produit("La jeune et dynamique\n Louane qui vous envoutera\n avec sa magnifique voix !","Chambre 12" , "oui","40", "50", "/images/produits/louane.jpg","CD"));
+		}
 	
 	public static ObservableList<Produit> getProducts(){
 		return produitList;

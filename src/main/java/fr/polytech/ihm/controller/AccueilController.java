@@ -31,6 +31,12 @@ public class AccueilController extends MenuController{
             cpt = 0;
         bienvenue.setImage(new Image(listeOfImage.get(cpt)));
     }
+    public void remplaceImage2(){
+        cpt--;
+        if(cpt < 0)
+            cpt = listeOfImage.size()-1;
+        bienvenue.setImage(new Image(listeOfImage.get(cpt)));
+    }
     
     public void anglais(){
         super.anglais();

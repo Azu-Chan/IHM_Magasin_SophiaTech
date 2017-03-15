@@ -15,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
    <children>
-      <Pane prefHeight="33.0" prefWidth="1920.0" style="-fx-background-color: #002054;">
+      <Pane layoutX="1.0" layoutY="-5.0" prefHeight="33.0" prefWidth="1937.0" style="-fx-background-color: #002054;">
          <children>
             <HBox alignment="TOP_RIGHT" layoutX="1720.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="167.0" prefWidth="115.0">
                <children>
@@ -41,9 +41,9 @@
             </HBox>
          </children>
       </Pane>
-      <Pane prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;">
+      <Pane layoutX="1.0" layoutY="27.0" prefHeight="167.0" prefWidth="1937.0" style="-fx-background-color: #002E78;">
          <children>
-            <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="247.0" onMouseClicked="#toBeOrToHave" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="toBeOrToHave" fitHeight="130.0" fitWidth="257.0" onMouseClicked="#toBeOrToHave" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/16776291_10209955310617226_1928833956_o.jpg" />
                </image>
@@ -87,20 +87,21 @@
             </Label>
          </children>
       </Pane>
-      <HBox alignment="CENTER">
+      <Pane layoutX="-3.0" layoutY="192.0" prefHeight="663.0" prefWidth="196.0" style="-fx-background-color: #E5E5E5;" />
+      <Pane layoutX="1725.0" layoutY="192.0" prefHeight="663.0" prefWidth="209.0" style="-fx-background-color: #E5E5E5;" />
+      <Pane layoutX="182.0" layoutY="193.0" prefHeight="663.0" prefWidth="1555.0" style="-fx-background-color: #E5E5E5;">
          <children>
-            <Button fx:id="id2" mnemonicParsing="false" text="&lt;" />
-            <ImageView fx:id="bienvenue" fitHeight="337.0" fitWidth="547.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="id" layoutX="358.0" layoutY="201.0" mnemonicParsing="false" onAction="#remplaceImage2" text="&lt;" />
+            <ImageView fx:id="bienvenue" fitHeight="337.0" fitWidth="547.0" layoutX="490.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/bienvenue.jpg" />
                </image>
             </ImageView>
-            <Button mnemonicParsing="false" onAction="#remplaceImage" text="&gt;" />
-         </children></HBox>
-      <Label text="SLOGan" />
-      <Pane prefHeight="200.0" />
-      <Pane prefHeight="200.0" />
-      <Pane style="-fx-background-color: #002E78; -fx-border-color: black;">
+            <Button layoutX="1111.0" layoutY="198.0" mnemonicParsing="false" onAction="#remplaceImage" text="&gt;" />
+            <Label layoutX="763.0" layoutY="451.0" text="SLOGan" />
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="850.0" prefHeight="145.0" prefWidth="1920.0" style="-fx-background-color: #002E78; -fx-border-color: black;">
          <children>
             <VBox layoutX="1338.0" layoutY="-1.0" prefHeight="97.0" prefWidth="427.0">
                <children>
@@ -119,7 +120,7 @@
             <Label layoutX="849.0" layoutY="115.0" prefHeight="17.0" prefWidth="220.0" text="Copyright 2017 To Be or To Have" textFill="WHITE" />
             <ImageView fitHeight="20.0" fitWidth="50.0" layoutX="828.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/16790432_10209955312417271_467153859_n.png" />
+                  <Image url="@../images/16790432_10209955312417271_467153859_n.png" />
                </image>
             </ImageView>
             <Hyperlink fx:id="lient1" focusTraversable="false" layoutX="388.0" layoutY="25.0" onAction="#quiSommesNous" text="Qui sommes nous ?" textFill="WHITE" />
@@ -127,4 +128,4 @@
          </children>
       </Pane>
    </children>
-</VBox>
+</Pane>

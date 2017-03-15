@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -129,7 +129,7 @@
          <top>
             <BorderPane prefHeight="371.0" prefWidth="1554.0" BorderPane.alignment="CENTER">
                <left>
-                  <Button fx:id="id" mnemonicParsing="false" text="&lt;" BorderPane.alignment="CENTER" />
+                  <Button fx:id="id" mnemonicParsing="false" onAction="#remplaceImage2" text="&lt;" BorderPane.alignment="CENTER" />
                </left>
                <right>
                   <Button mnemonicParsing="false" onAction="#remplaceImage" text="&gt;" BorderPane.alignment="CENTER" />

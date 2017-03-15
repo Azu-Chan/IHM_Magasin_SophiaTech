@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AdminController">
    <children>
       <Pane layoutX="3.0" prefHeight="38.0" prefWidth="1931.0" style="-fx-background-color: #002054;" />
       <Pane layoutX="10.0" layoutY="26.0" prefHeight="167.0" prefWidth="1924.0" style="-fx-background-color: #002E78;">

@@ -88,7 +88,7 @@
             </Pane>
          </children>
       </AnchorPane>
-      <Button fx:id="id" layoutX="541.0" layoutY="319.0" mnemonicParsing="false" text="&lt;" />
+      <Button fx:id="id" layoutX="450.0" layoutY="332.0" mnemonicParsing="false" onAction="#remplaceImage2" text="&lt;" />
       <ImageView fx:id="bienvenue" fitHeight="337.0" fitWidth="547.0" layoutX="697.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/bienvenue.jpg" />

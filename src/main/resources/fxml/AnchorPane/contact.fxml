@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ContactController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -69,22 +69,7 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="284.0" layoutY="167.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre message sera traité dans les plus brefs délais, vous receverez une réponse sur l'adresse e-mail saisie." textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font size="22.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <effect>
-                  <Blend />
-               </effect>
-            </Label>
-            <VBox alignment="TOP_CENTER" maxWidth="500.0" prefHeight="200.0" prefWidth="50.0" />
-         </children>
-      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="225.0" prefHeight="0.0" prefWidth="1746.0" />
       <Button layoutX="952.0" layoutY="880.0" mnemonicParsing="false" prefWidth="100.0" text="Envoyer" />
       <TextArea layoutX="753.0" layoutY="304.0" prefHeight="549.0" prefWidth="500.0" />
       <Label alignment="CENTER" layoutX="635.0" layoutY="288.0" prefHeight="16.0" prefWidth="736.0" text="Message :" />
@@ -115,7 +100,7 @@
          <children>
             <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/grande_bretagne_1606.gif" />
+                  <Image url="@../images/grande_bretagne_1606.gif" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -123,7 +108,7 @@
             </ImageView>
             <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/Flag_of_France.svg.png" />
+                  <Image url="@../images/Flag_of_France.svg.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -131,5 +116,16 @@
             </ImageView>
          </children>
       </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="410.0" layoutY="182.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre message sera traité dans les plus brefs délais, vous receverez une réponse sur l'adresse e-mail saisie." textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

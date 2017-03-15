@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ESPController">
+<BorderPane fx:id="borderp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.QSNController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -86,12 +86,12 @@
                            </graphic></Menu>
                      </menus>
                   </MenuBar>
-                  <Label fx:id="suite" layoutX="824.0" layoutY="14.0" text="n savoir plus" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="suite" layoutX="765.0" layoutY="14.0" text="ui sommes nous ?" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lettre" layoutX="786.0" layoutY="14.0" text="E" textFill="#00ccff">
+                  <Label fx:id="lettre" layoutX="718.0" layoutY="14.0" text="Q" textFill="#00ccff">
                      <font>
                         <Font size="60.0" />
                      </font>
@@ -101,7 +101,4 @@
          </center>
       </BorderPane>
    </top>
-   <center>
-      <BorderPane fx:id="borderp" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </center>
 </BorderPane>
