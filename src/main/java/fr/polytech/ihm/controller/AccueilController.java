@@ -15,17 +15,22 @@ public class AccueilController extends MenuController{
     @FXML
     private ImageView bienvenue;
     private List<String> listeOfImage;
+    
     @FXML
     public void initialize(){
         listeOfImage = new ArrayList<>();
-        listeOfImage.add("/images/bienvenue.jpg");
-        listeOfImage.add("/images/promotion.png");
+        listeOfImage.add("/images/diapoAccueil/bienvenue.jpg");
+        listeOfImage.add("/images/diapoAccueil/promotion.png");
+        listeOfImage.add("/images/diapoAccueil/dvdp_inline.jpg");
+        listeOfImage.add("/images/diapoAccueil/sa_6.jpg");
+        bienvenue.setImage(new Image(listeOfImage.get(cpt)));
         
         if(langue)
             anglais();
 
     }
-    public void remplaceImage(){
+    
+    public void remplaceImageUp(){
         cpt++;
         if(cpt == listeOfImage.size())
             cpt = 0;
@@ -35,6 +40,13 @@ public class AccueilController extends MenuController{
         cpt--;
         if(cpt < 0)
             cpt = listeOfImage.size()-1;
+        bienvenue.setImage(new Image(listeOfImage.get(cpt)));
+    }
+    
+    public void remplaceImageDown(){
+        cpt--;
+        if(cpt == -1)
+            cpt = listeOfImage.size() - 1;
         bienvenue.setImage(new Image(listeOfImage.get(cpt)));
     }
     
