@@ -89,7 +89,7 @@
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>
-                              <Button fx:id="button3" blendMode="DARKEN" mnemonicParsing="false" onAction="#produit" text="Produit" />
+                              <Button fx:id="button3" blendMode="DARKEN" mnemonicParsing="false" onAction="#produit" text="Produits" />
                            </graphic></Menu>
                         <Menu mnemonicParsing="false">
                            <graphic>

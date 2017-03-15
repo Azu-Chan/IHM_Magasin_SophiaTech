@@ -13,6 +13,7 @@ public class DescController {
     public void initialize(){
         button.setText("Acheter");
         button.setStyle("-fx-font: 22 arial; -fx-base: #003694;");
+        
         if(MenuController.langue){
             button.setText("Buy");
         }
