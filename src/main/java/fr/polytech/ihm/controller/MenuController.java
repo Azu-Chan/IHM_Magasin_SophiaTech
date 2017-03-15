@@ -74,14 +74,15 @@ public class MenuController {
         stage.show();
     }
     public void toBeOrToHave(){
-        System.out.println("jjjjjjjjjjjjjjj");
     }
     public void anglais(){
-        lient1.setText("Who we are ?");
-        lient2.setText("To knew more");
         button1.setText("Home");
         button2.setText("Who are we?");
         button3.setText("Products");
         envoyer.setText("Send");
+        if(lient1 != null)
+            lient1.setText("Who we are ?");
+        if(lient2 != null)
+        lient2.setText("To knew more");
     }
 }

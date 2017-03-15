@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.AccueilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.polytech.ihm.controller.ContactController">
    <left>
       <Pane prefHeight="680.0" prefWidth="170.0" style="-fx-background-color: #E5E5E5;" BorderPane.alignment="CENTER" />
    </left>
@@ -92,7 +92,7 @@
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <top>
-            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre message sera traité dans les plus brefs délais, vous receverez une réponse sur l'adresse e-mail saisie." textOverrun="CENTER_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
+            <Label fx:id="lable" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="58.0" prefWidth="1351.0" text="Votre message sera traité dans les plus brefs délais, vous receverez une réponse sur l'adresse e-mail saisie." textOverrun="CENTER_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>
@@ -119,7 +119,7 @@
             </VBox>
          </center>
          <bottom>
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Envoyer" BorderPane.alignment="CENTER" />
+            <Button fx:id="envoyer" mnemonicParsing="false" prefWidth="100.0" text="Envoyer" BorderPane.alignment="CENTER" />
          </bottom></BorderPane>
    </center>
 </BorderPane>

@@ -14,8 +14,6 @@ public class AccueilController extends MenuController{
     private int cpt = 0;
     @FXML
     private ImageView bienvenue;
-
-
     private List<String> listeOfImage;
     @FXML
     public void initialize(){
