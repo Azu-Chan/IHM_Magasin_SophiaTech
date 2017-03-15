@@ -11,7 +11,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -54,29 +53,7 @@
    <top>
       <BorderPane prefHeight="197.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
          <top>
-            <Pane prefHeight="33.0" prefWidth="1920.0" style="-fx-background-color: #002054;" BorderPane.alignment="CENTER">
-               <children>
-                  <HBox alignment="TOP_RIGHT" layoutX="1720.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="167.0" prefWidth="115.0">
-                     <children>
-                        <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/grande_bretagne_1606.gif" />
-                           </image>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="23.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/Flag_of_France.svg.png" />
-                           </image>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </ImageView>
-                     </children>
-                  </HBox>
-               </children></Pane>
+            <Pane prefHeight="33.0" prefWidth="1920.0" style="-fx-background-color: #002054;" BorderPane.alignment="CENTER" />
          </top>
          <center>
             <Pane prefHeight="167.0" prefWidth="1920.0" style="-fx-background-color: #002E78;" BorderPane.alignment="CENTER">
